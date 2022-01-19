@@ -1,6 +1,6 @@
 package xadrez;
 
-import tabuleiro.Tabuleiro;
+import jogoDeTabuleiro.Tabuleiro;
 
 public class PartidaXadrez {
 	
@@ -10,7 +10,13 @@ public class PartidaXadrez {
 		tabuleiro = new Tabuleiro(8,8);
 	}
 	
-	public PecaXadrez[][] getPecas(){
+	public PecaXadrez[][] getPeca(){
 		PecaXadrez[][] mat = new PecaXadrez[tabuleiro.getLinhas()][tabuleiro.getColunas()];
+		for (int i = 0; i < tabuleiro.getColunas(); i++) {
+			for (int j = 0; j < tabuleiro.getLinhas(); j++) {
+				mat[i][j] = (PecaXadrez) tabuleiro.peca(i, j);
+			}
+		}
+		return mat;
 	}
 }
