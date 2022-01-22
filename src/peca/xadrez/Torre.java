@@ -11,10 +11,6 @@ public class Torre extends PecaXadrez{
 	}
 	@Override
 	public String toString() {
-		if (super.getCor() == Cor.BRANCO) {
-			return "\u2656";
-		} else {
-			return "\u265C";
-		}
+			return "♜";
 	}
 }

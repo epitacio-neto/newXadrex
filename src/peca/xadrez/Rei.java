@@ -12,10 +12,6 @@ public class Rei extends PecaXadrez{
 	
 	@Override
 	public String toString() {
-		if (super.getCor() == Cor.BRANCO) {
-			return "\u2654";
-		} else {
-			return "\u265A";
-		}
+			return "R";
 	}
 }
